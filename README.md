@@ -13,8 +13,8 @@ The application that I will create to learn Next.js, will be a web page that wil
 [ ] Show user information
 [ ] Back button.
 
-#### Navigation experiênce
-When the user clicks on the back button will go back to the previous
+#### Navigation experience
+When the user clicks on the back button will go back to the previous page, previously cached to don't make multiple requests.
 
 ### Installation 
 To initialize a Next.js project will need to run `npx create-next-app@latest` and follow what is asked.

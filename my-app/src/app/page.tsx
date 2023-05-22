@@ -1,10 +1,12 @@
-import Link from "next/link";
+import UsersList from "./components/UsersList"
 
-export default function Home() {
+export default async function Home() {
+  const usersData: Array<IUser> = await fetch("https://api.github.com/users").then(res => res.json())
+
   return (
     <>
       <h1>Hello World</h1>
-      <Link href="/mypage" replace={true}>My Page</Link>
+      <UsersList users={usersData} />
     </>
   )
 }
