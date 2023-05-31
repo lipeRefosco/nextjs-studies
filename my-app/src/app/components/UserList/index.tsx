@@ -3,7 +3,7 @@ import './style.css'
 
 export default function UserList({ userData }: { userData: IUser }) {
 	return (
-		<Link href={"users/" + userData.login} replace={true}>
+		<Link href={"user/" + userData.login} replace={true}>
 			<li className="user">
 				<img src={userData.avatar_url} className="user__avatar" />
 				<div className="user__name">{userData.login}</div>
