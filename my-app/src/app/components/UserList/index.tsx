@@ -1,7 +1,7 @@
 import Link from "next/link";
 import './style.css'
 
-export default function UserList({ userData }: { userData: IUser }) {
+export default function UserList({ userData }: { userData: User }) {
 	return (
 		<Link href={"user/" + userData.login} replace={true}>
 			<li className="user">

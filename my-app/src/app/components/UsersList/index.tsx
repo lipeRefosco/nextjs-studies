@@ -3,12 +3,12 @@ import './style.css'
 
 export default function UsersList(
 	{ users }:
-		{ users: IUser[] }
+		{ users: User[] }
 ) {
 	return (
 		<>
 			<ul className="users">
-				{users.map((user: IUser) => {
+				{users.map((user: User) => {
 					return <UserList userData={user} />;
 				})}
 			</ul>

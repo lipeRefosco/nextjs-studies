@@ -1,7 +1,7 @@
 import UsersList from "./components/UsersList"
 
 export default async function Home() {
-  const usersData: Array<IUser> = await fetch("https://api.github.com/users").then(res => res.json())
+  const usersData: Array<User> = await fetch("https://api.github.com/users").then(res => res.json())
 
   return (
     <>
