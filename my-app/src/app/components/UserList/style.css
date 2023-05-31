@@ -7,29 +7,22 @@
 
     /* style */
     padding: 0.5rem;
-    border-radius: 1rem;
-    background: rgb(2, 0, 36);
-    background: linear-gradient(90deg,
-            rgba(2, 0, 36, 1) 50%,
-            rgba(0, 204, 246, 1) 75%,
-            rgba(0, 255, 211, 1) 100%);
-    /* x axes, y axes */ 
-    background-size: 200% 100%;
-    background-position: left;
-    animation-name: gradient;
-    animation-iteration-count: 1;
-    animation-duration:300ms;
+    border-radius: 0.3rem;
+    background-color: rgb(210, 210, 210);
+}
+
+/* Select each even child element up to class .user */
+.users :nth-child(even) .user{
+    background-color: rgb(220, 220, 220);
 }
 
 .user:hover {
-    background-position: right;
-    animation-name: gradientHover;
-    animation-timing-function: ease-in;
+
 }
 
 .user__avatar {
     width: 3.5rem;
-    border-radius: 1rem;
+    border-radius: .6rem;
 }
 
 .user__name {
@@ -41,22 +34,4 @@
 
 .user:hover .user__name {
     font-weight: bold;
-}
-
-@keyframes gradient {
-    0% {
-        background-position: right;
-    }
-    100% {
-        background-position: left;
-    }
-}
-
-@keyframes gradientHover {
-    0% {
-        background-position: left;
-    }
-    100% {
-        background-position: right;
-    }
 }
