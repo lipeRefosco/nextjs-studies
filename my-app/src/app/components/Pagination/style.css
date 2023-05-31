@@ -1,0 +1,16 @@
+.pagination-number {
+    @apply
+        px-2
+        m-1
+        rounded-md
+        text-center
+        min-w-[30px]
+        bg-gray-200
+        text-white
+        font-bold
+}
+
+.pagination-number:hover,
+.pagination-number--disabled {
+    @apply bg-gray-400
+}

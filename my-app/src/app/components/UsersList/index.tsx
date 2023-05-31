@@ -2,8 +2,8 @@ import UserList from '../UserList';
 import './style.css'
 
 export default function UsersList(
-	{ users }:
-		{ users: User[] }
+	{ users } :
+	{ users: User[] }
 ) {
 	return (
 		<>
