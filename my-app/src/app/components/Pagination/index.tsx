@@ -20,8 +20,6 @@ export default function Pagination(
                 const onFirstPage = searchParams.page === undefined && page === 0
                 const onPage = parseInt(searchParams.page) === page;
 
-                console.log(onPage)
-
                 return onPage || onFirstPage
                         ? <span key={page} className="pagination-number pagination-number--disabled">{page + 1}</span>
                         : <Link key={page} href={'?page=' + page} className="pagination-number">{page + 1}</Link>
