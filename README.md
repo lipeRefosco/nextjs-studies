@@ -6,12 +6,13 @@ This repository is used exclusively to learn Next.js. I won't follow any tutoria
 The application that I will create to learn Next.js, will be a web page that will consume Github API.
 
 ### Home Page
-[ ] Will list the Github users on the main page
-[ ] Create pagination.
+- [x] Will list the Github users on the main page
+- [x] Create pagination from a single request.
+- [ ] Make pagination dynamic when don't know how much is left.
 
 ### User Page
-[ ] Show user information
-[ ] Back button.
+- [ ] Show user information
+- [ ] Back button.
 
 #### Navigation experience
 When the user clicks on the back button will go back to the previous page, previously cached to don't make multiple requests.

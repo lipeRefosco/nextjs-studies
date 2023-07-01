@@ -12,8 +12,8 @@ export default function Pagination(
         usersPerPage: number
     }
 ) {
-    const totalPages: Array<number> = [...new Array(totalUsers / usersPerPage).keys()];
-    
+    const numbersOfPages = totalUsers / usersPerPage + 1;
+    const totalPages: Array<number> = [...new Array(numbersOfPages).keys()];
     return (
         <div className="m-2 flex justify-end">
             {totalPages.map((page:number) => {
