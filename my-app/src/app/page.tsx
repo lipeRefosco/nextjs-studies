@@ -1,25 +1,24 @@
+import FetchUsers from "@/utils/FetchUsers";
+import parseIntForced from "@/utils/parseIntForced";
 import Pagination from "./components/Pagination"
 import UsersList from "./components/UsersList"
 
 export default async function Home(
-    {searchParams} :
-    {searchParams:PaginationInfo}
+    {
+      searchParams
+    } : {
+      searchParams: PaginationInfo
+    }
   ) {
-  const defaultUsersPerPage = 5;
-  const userDataStartSplice = searchParams.page
-                              ? Number.parseInt(searchParams.page) * defaultUsersPerPage
-                              : 0;
 
-  const usersData: User[] = await fetch("https://api.github.com/users").then(res => res.json());
-  const reducedUsers: User[] = usersData.splice(userDataStartSplice, defaultUsersPerPage);
-
+  const pageNumberParsed: number = parseIntForced(searchParams.page);
+  
+  const usersData: User[] = await FetchUsers.getUsersOfPage(pageNumberParsed);
+  
   return (
     <>
-      <Pagination
-                  searchParams={searchParams}
-                  totalUsers={usersData.length}
-                  usersPerPage={defaultUsersPerPage} />
-      <UsersList users={reducedUsers} />
+      <Pagination pageNumber={pageNumberParsed} />
+      <UsersList users={usersData} />
     </>
   )
 }
